@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Земляничная поляна — Коттеджный городок в Боровом</title>
+  <meta name="description" content="Коттеджи и дома в экологически чистом посёлке «Земляничная поляна» у озера Боровое. Цены от 52 до 99 млн тенге. Живописная природа Казахстана.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a class="navbar__logo" href="#">
+    <div class="navbar__logo-icon">🍓</div>
+    <div class="navbar__logo-text">
+      <span class="navbar__logo-main">Земляничная поляна</span>
+      <span class="navbar__logo-sub">Боровое · Казахстан</span>
+    </div>
+  </a>
+
+  <ul class="navbar__links" id="nav-links">
+    <li><a href="#about">О посёлке</a></li>
+    <li><a href="#cottages">Дома</a></li>
+    <li><a href="#amenities">Инфраструктура</a></li>
+    <li><a href="#location">Как добраться</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+
+  <button class="navbar__cta" onclick="openModal(null)">Получить консультацию</button>
+  <div class="burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+  <div class="hero__particles"></div>
+
+  <div class="hero__content">
+    <div class="hero__badge">
+      <span>Новый проект 2025</span>
+    </div>
+    <h1 class="hero__title">
+      Земляничная<br><span>поляна</span>
+    </h1>
+    <p class="hero__subtitle">Коттеджный городок у озера Боровое</p>
+    <p class="hero__desc">
+      Живите в гармонии с природой. 48 домов в реликтовом сосновом лесу —
+      всего 800 метров до кристального озера Боровое.
+    </p>
+    <div class="hero__actions">
+      <button class="btn btn--primary" onclick="scrollTo('cottages')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Смотреть дома
+      </button>
+      <button class="btn btn--outline" onclick="openModal(null)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18 2 2 0 014.97 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17.92z"/></svg>
+        Получить звонок
+      </button>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <div class="hero__scroll-line"></div>
+    <span>Листать</span>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<div class="stats">
+  <div class="stats__inner" id="stats-grid"></div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about__inner">
+    <div class="about__visual">
+      <div class="about__img-main"></div>
+      <div class="about__img-accent"></div>
+      <div class="about__tag">🏆 Лучший проект Борового</div>
+    </div>
+    <div>
+      <p class="section-label">О нас</p>
+      <h2 class="section-title">Место, где хочется жить каждый день</h2>
+      <p class="section-desc">
+        «Земляничная поляна» — это закрытый коттеджный посёлок в сердце природного парка Бурабай.
+        Мы создали пространство, где современный комфорт встречается с первозданной красотой казахстанской природы.
+      </p>
+      <ul class="about__list">
+        <li>Реликтовый сосновый лес — прямо у порога вашего дома</li>
+        <li>800 метров до озера Боровое с чистейшей водой</li>
+        <li>Закрытая охраняемая территория с КПП и видеонаблюдением</li>
+        <li>Все коммуникации: газ, вода, электричество, оптоволоконный интернет</li>
+        <li>Развитая инфраструктура: детская площадка, спортзона, магазин</li>
+        <li>Гарантия на строительство и юридическая чистота сделки</li>
+      </ul>
+      <button class="btn btn--green" onclick="openModal(null)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Скачать презентацию
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COTTAGES ===== -->
+<section class="cottages" id="cottages">
+  <div class="cottages__inner">
+    <div class="section-header">
+      <p class="section-label">Недвижимость</p>
+      <h2 class="section-title">Дома и коттеджи</h2>
+      <p class="section-desc">От уютных коттеджей до просторных вилл с бассейном. Цены от 52 до 99 млн тенге.</p>
+    </div>
+    <div class="cottages__grid" id="cottages-grid"></div>
+  </div>
+</section>
+
+<!-- ===== AMENITIES ===== -->
+<section class="amenities" id="amenities">
+  <div class="amenities__inner">
+    <div class="section-header">
+      <p class="section-label">Инфраструктура</p>
+      <h2 class="section-title">Всё для жизни рядом</h2>
+      <p class="section-desc">Посёлок создан с заботой о каждой детали — от безопасности до уюта ежедневного быта.</p>
+    </div>
+    <div class="amenities__grid" id="amenities-grid"></div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location" id="location">
+  <div class="location__inner">
+    <div>
+      <p class="section-label">Расположение</p>
+      <h2 class="section-title">Как добраться</h2>
+      <p class="section-desc">Посёлок расположен в национальном природном парке «Бурабай»,
+        Акмолинская область. Удобная транспортная доступность из Астаны и Кокшетау.</p>
+      <ul class="location__routes">
+        <li class="route">
+          <span class="route__icon">🏙️</span>
+          <div class="route__text">
+            <div class="route__name">Из Астаны</div>
+            <div class="route__from">По трассе А19 через Кокшетау</div>
+          </div>
+          <span class="route__time">2.5 ч</span>
+        </li>
+        <li class="route">
+          <span class="route__icon">🚉</span>
+          <div class="route__text">
+            <div class="route__name">Поезд Астана — Щучинск</div>
+            <div class="route__from">Регулярные рейсы ежедневно</div>
+          </div>
+          <span class="route__time">3 ч</span>
+        </li>
+        <li class="route">
+          <span class="route__icon">🌊</span>
+          <div class="route__text">
+            <div class="route__name">До озера Боровое</div>
+            <div class="route__from">Пешком по экотропе</div>
+          </div>
+          <span class="route__time">10 мин</span>
+        </li>
+        <li class="route">
+          <span class="route__icon">🛒</span>
+          <div class="route__text">
+            <div class="route__name">До центра Борового</div>
+            <div class="route__from">Магазины, рестораны, аптеки</div>
+          </div>
+          <span class="route__time">5 мин</span>
+        </li>
+      </ul>
+    </div>
+    <div class="location__map">
+      <div class="location__map-overlay">
+        <div class="location__map-pin"></div>
+        <div class="location__map-label">📍 Земляничная поляна, Боровое</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process">
+  <div class="process__inner">
+    <div class="section-header" style="text-align:center">
+      <p class="section-label" style="justify-content:center">Покупка</p>
+      <h2 class="section-title">Как купить дом</h2>
+      <p class="section-desc" style="margin:0 auto">Простой и прозрачный процесс от первого звонка до получения ключей</p>
+    </div>
+    <div class="process__steps">
+      <div class="step reveal">
+        <div class="step__num">1</div>
+        <div class="step__title">Заявка</div>
+        <p class="step__desc">Оставьте заявку на сайте или позвоните нам — мы ответим в течение 30 минут</p>
+      </div>
+      <div class="step reveal reveal--delay-1">
+        <div class="step__num">2</div>
+        <div class="step__title">Показ</div>
+        <p class="step__desc">Проведём экскурсию по посёлку и покажем все доступные варианты вживую</p>
+      </div>
+      <div class="step reveal reveal--delay-2">
+        <div class="step__num">3</div>
+        <div class="step__title">Бронирование</div>
+        <p class="step__desc">Зафиксируем цену и объект договором. Возможна рассрочка и ипотека</p>
+      </div>
+      <div class="step reveal reveal--delay-3">
+        <div class="step__num">4</div>
+        <div class="step__title">Ключи</div>
+        <p class="step__desc">Оформляем документы, проводим финальную приёмку и передаём вам ключи</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA / CONTACT ===== -->
+<section class="cta" id="contact">
+  <div class="cta__inner">
+    <h2 class="cta__title">Выберите свой<br><span>дом в Боровом</span></h2>
+    <p class="cta__desc">
+      Осталось 12 объектов. Оставьте заявку сейчас — наш менеджер свяжется
+      с вами и организует бесплатный показ в удобное для вас время.
+    </p>
+    <form class="cta__form" onsubmit="submitMainForm(event)">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Ваше имя" required>
+        <input class="form-input" type="tel" placeholder="+7 (___) ___-__-__" required>
+      </div>
+      <select class="form-input">
+        <option value="" disabled selected>Интересует объект</option>
+        <option>«Лесная сказка» — 52 млн ₸</option>
+        <option>«Берёзовый рай» — 68 млн ₸</option>
+        <option>«Сосновый бор» — 89 млн ₸</option>
+        <option>«Озёрный берег» — 99 млн ₸</option>
+        <option>Помогите выбрать</option>
+      </select>
+      <button type="submit" class="form-submit">Записаться на показ</button>
+      <p class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <a class="footer__logo" href="#">
+        <div class="footer__logo-icon">🍓</div>
+        <span class="footer__logo-name">Земляничная поляна</span>
+      </a>
+      <p class="footer__tagline">Коттеджный городок в национальном парке «Бурабай», Боровое, Казахстан</p>
+    </div>
+
+    <div>
+      <p class="footer__heading">Навигация</p>
+      <ul class="footer__list">
+        <li><a href="#about">О посёлке</a></li>
+        <li><a href="#cottages">Дома и коттеджи</a></li>
+        <li><a href="#amenities">Инфраструктура</a></li>
+        <li><a href="#location">Расположение</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer__heading">Объекты</p>
+      <ul class="footer__list">
+        <li><a href="#" onclick="openModal(1);return false">«Лесная сказка»</a></li>
+        <li><a href="#" onclick="openModal(2);return false">«Берёзовый рай»</a></li>
+        <li><a href="#" onclick="openModal(3);return false">«Сосновый бор»</a></li>
+        <li><a href="#" onclick="openModal(4);return false">«Озёрный берег»</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer__heading">Контакты</p>
+      <div class="footer__contacts">
+        <div class="footer__contact">
+          <div class="footer__contact-icon">📞</div>
+          <span>+7 (717) 200-48-00</span>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-icon">📞</div>
+          <span>+7 (701) 200-48-00</span>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-icon">✉️</div>
+          <span>info@zemlyanichnaya.kz</span>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-icon">📍</div>
+          <span>Боровое, Акмолинская обл.</span>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-icon">🕐</div>
+          <span>Пн–Вс: 9:00 – 20:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__copy">© 2025 ЖК «Земляничная поляна». Все права защищены.</p>
+    <div class="footer__socials">
+      <a class="footer__social" href="#" title="Instagram">📸</a>
+      <a class="footer__social" href="#" title="Telegram">✈️</a>
+      <a class="footer__social" href="#" title="WhatsApp">💬</a>
+      <a class="footer__social" href="#" title="YouTube">▶️</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="float-wa" href="https://wa.me/77012004800" target="_blank" title="Написать в WhatsApp">
+  💬
+</a>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal()">✕</button>
+    <h3 class="modal__title" id="modal-title">Оставить заявку</h3>
+    <p class="modal__subtitle" id="modal-subtitle">Мы свяжемся с вами в течение 30 минут</p>
+    <form class="modal__form" onsubmit="submitModal(event)">
+      <input type="hidden" id="modal-cottage">
+      <input class="modal__input" type="text" id="modal-name" placeholder="Ваше имя" required>
+      <input class="modal__input" type="tel" id="modal-phone" placeholder="+7 (___) ___-__-__" required>
+      <input class="modal__input" type="text" placeholder="Удобное время звонка" >
+      <button type="submit" class="modal__submit">Отправить заявку</button>
+      <p style="font-size:.75rem;color:var(--text-light);text-align:center;margin-top:4px;">
+        Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<script src="data/cottages.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
